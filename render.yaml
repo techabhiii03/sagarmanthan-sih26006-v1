@@ -2,6 +2,7 @@ services:
   - type: web
     name: sagarmanthan-sih26006
     runtime: docker
+    plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /api/health
     autoDeploy: true
