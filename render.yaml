@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sagarmanthan-sih26006
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATA_MODE
+        value: DEMO
+      - key: DEMO_MODE
+        value: true
+      - key: DATA_RANDOM_SEED
+        value: 42
+      - key: FREIGHT_DATA_PROVIDER
+        value: synthetic
